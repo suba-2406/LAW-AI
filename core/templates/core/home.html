@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Law-AI Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/css/general.css' %}">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .center-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #3498db;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="center-content">
+        <h1>Law-AI</h1>
+        <p>An AI powered dashboard for advocates</p>
+
+        <div style="margin-top: 20px;">
+            <a href="{% url 'upload_pdf' %}">
+                <button>PDF Summarizer</button>
+            </a>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <a href="{% url 'upload_pdf' %}">
+                <button>Chat with AI About PDF</button>
+            </a>
+            <p>(Upload a PDF first, then click chat from the next screen)</p>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <a href="{% url 'document_selector' %}">
+                <button>Generate Legal Documents</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
